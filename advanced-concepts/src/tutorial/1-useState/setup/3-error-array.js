@@ -8,8 +8,11 @@ function ArrayExample(){
 
     const [d,setD] = useState(data);
 
-    removeId = (id) => {
-        const newPeople  = d.filter(() => data.id !== id)
+    function removeId(id){
+        const newPeople  = d.filter((d) => d['id'] !== id)
+        console.log(id);
+        console.log(newPeople);
+        setD(newPeople);
     }
     
     const names = d.map((name) => {
