@@ -12,7 +12,7 @@ function Counter(){
     }
     function Decrement(){
         setValue(value-1);
-    }
+    } 
     function Reset(){
         setValue(0);
     }
