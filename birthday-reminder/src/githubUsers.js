@@ -8,13 +8,13 @@ function GetUsers(){
     const [users, setUsers] = useState([]);
 
 
-    let getUsers = () => {
+    const getUsers = () => {
 
         fetch(url).then((response) => {
             return response.json()
         }).then(
             (data) => {
-                console.log(data);
+                // console.log(data);
                 setUsers(data);
             }
         )
@@ -22,7 +22,7 @@ function GetUsers(){
 
     useState(
         () => {
-            getUsers()
+            getUsers();
         }, []
     )
 
@@ -36,10 +36,14 @@ function GetUsers(){
         {
             users.map((user) => {
                 const {avatar_url,login} = user;
-                <>
-                    <li><img src={avatar_url} /></li>
-                    <li>{login}</li>
-                </>
+                // console.log(avatar_url,login
+                return(
+
+                    <li key={login}>
+                        <img src={avatar_url} />
+                        <h4>{login}</h4>
+                    </li>
+                )
             })
                 
            
@@ -48,4 +52,4 @@ function GetUsers(){
     </>
 }
 
-export default getUsers;
+export default GetUsers;
