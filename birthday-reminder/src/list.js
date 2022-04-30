@@ -9,7 +9,6 @@ function List(props){
     const data = Data;
 
    
-    
     return (
         <React.Fragment>
         {
