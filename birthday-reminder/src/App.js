@@ -6,12 +6,14 @@ import List from './list';
 import UseEffect from './useEffect';
 import Cleanup from './cleanup';
 import Github from './githubUsers';
+import SingleUser from './singleUser';
+
 
 function App() {
   return (
     <React.Fragment>
       <div>
-        <Github />
+        <SingleUser />
       </div>
     </React.Fragment>
   );
